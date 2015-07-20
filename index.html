@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset='utf-8'>
+	<title>jQuery Functions</title>
+	<meta name="jQuery Functions" content="A demonstration of different jQuery functions">
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+		$('#add_class_butt').click(function(){
+			$('#ac').addClass('effects');
+		})
+		$('#after_butt').click(function(){
+			$('#after').after('<p>You added text!</p>');
+		})
+		$('#app_butt').click(function(){
+			$('#append').append(' Here is some more text!');
+		})
+		$('#attribute_butt').on('click', function (){
+			$('.attr').attr('class', 'effects');
+		})
+		$('#before_butt').click(function(){
+			$('#before').before("<p>You added text!</p>");
+		})
+		$('#html_butt').click(function(){
+			$('#html').html('<b>This text can be bold because we are adding straight HTML, not just text!</b>');
+		})
+		$('#text_butt').click(function(){
+			$('#text').text('You just set the .text parameter of this paragraph!');
+		})
+		$('#val_butt').click(function(){
+			var input = $('#val_in').val();
+			$('#val_out').text(input);
+		})
+		$('#toggle_butt').click(function(){
+			$('#toggle').toggle();
+		})
+		$('#hide').click(function(){
+			$('#hs').hide();
+		})
+		$('#show').click(function(){
+			$('#hs').show();
+		})
+		$('#slideUp_butt').click(function(){
+			$('#slide').slideUp();
+		})
+		$('#slideDown_butt').click(function(){
+			$('#slide').slideDown();
+		})
+		$('#slideToggle_butt').click(function(){
+			$('#slideToggle').slideToggle();
+		})
+		$('#in').click(function(){
+			$('#fade').fadeIn();
+		})
+		$('#out').click(function(){
+			$('#fade').fadeOut();
+		})
+		$('#focus').focus(function(){
+			alert('We notices that you focued on that text box!');
+		})
+	});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<h2>.addClass</h2>
+		<button id="add_class_butt">.addClass</button>
+		<p id="ac">Click the button to add the 'effects' class to this element, which will make the text red and the background black.</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h2>.after</h2>
+		<button id="after_butt">.after</button>
+		<p id="after">Click the button to add text after this paragraph.</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h2>.append</h2>
+		<button id="app_butt">.append</button>
+		<p id="append">Click the button to <b>append</b> text at the end of this paragraph (notice the difference between <i>append</i> and <i>after</i>).</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h2>.attr</h2>
+		<button id="attribute_butt">.attr</button>
+		<p>Click the button to change the <i>class</i> attribute of the text below to 'effects', which will turn the text red and background black.</p>
+		<p class="attr">This text should change</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h2>.before</h2>
+		<button id="before_butt">.before</button>
+		<p id="before">Click the button to add text before this paragraph.</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h2>.html</h2>
+		<button id="html_butt">.html</button>
+		<p id="html">Click the button to swap the HTML for this paragraph.</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h2>.text</h2>
+		<button id="text_butt">.text</button>
+		<p id="text">Click to change the text property of this paragraph! Text can be used with no parameter to retrieve the text parameter of an element too! Set or get!</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h3>.val</h3>
+		<button id="val_butt">.val</button>
+		<p>Type anything into the box below. jQuery will grab the value and return it below!</p>
+		<input type="text" id="val_in">
+		<p id="val_out">The output will appear here.</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h3>.toggle</h3>
+		<button id="toggle_butt">.toggle</button>
+		<p id="toggle">Click the button to toggle the state of this text!</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h3>.hide and .show</h3>
+		<button id="hide">.hide</button>
+		<button id="show">.show</button>
+		<p id="hs">Click the corresponding button to .hide or .show this paragraph!</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h3>.slideDown and .slideUp</h3>
+		<button id="slideDown_butt">.slideDown</button>
+		<button id="slideUp_butt">.slideUp</button>
+		<p id="slide">Click the corresponding button to either .slideUp or .slideDown this text!</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h3>.slideToggle</h3>
+		<button id="slideToggle_butt">.slideToggle</button>
+		<p id="slideToggle">A faster way to use .slideUp and .slideDown is to just use .slideToggle. Check it out!</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h3>.fadeIn and .fadeOut</h3>
+		<button id="in">.fadeIn</button>
+		<button id="out">.fadeOut</button>
+		<p id="fade">Click the corresponding button to see what .fadeIn and .fadeOut do!</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+	<div class="container">
+		<h3>.focus</h3>
+		<input type="text" id="focus">
+		<p>Click inside the textbox to see what .focus does!</p>
+	</div>
+	<br>
+	<hr>
+	<br>
+
+</body>
+</html>

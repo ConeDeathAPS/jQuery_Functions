@@ -1,0 +1,17 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+.container {
+	height: 110px;
+	background-color: lightgray;
+	padding: 15px;
+	text-align: center;
+}
+	.container button {
+		margin: 10px;
+	}
+.effects {
+	color: red;
+	background-color: black;
+}
